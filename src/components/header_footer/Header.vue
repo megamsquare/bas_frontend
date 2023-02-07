@@ -1,9 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+</script>
 <template>
     <header>
         <div>
             <nav>
-
+                <RouterLink to="/">Login</RouterLink>
             </nav>
         </div>
     </header>
