@@ -6,8 +6,11 @@ import { RouterLink } from 'vue-router';
         <div>
             <nav>
                 <div>
-                    <RouterLink to="/about">Login</RouterLink>
-                    <RouterLink to="/team">Login</RouterLink>
+                    <img src="@/assets/logo.svg" alt="">
+                </div>
+                <div>
+                    <RouterLink to="/about">About</RouterLink>
+                    <RouterLink to="/team">Team</RouterLink>
                     <RouterLink to="/">Login</RouterLink>
                 </div>
             </nav>
