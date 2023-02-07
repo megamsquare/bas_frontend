@@ -1,56 +1,31 @@
-<template>
-    <form>
-        <div>
-            <label for="username">Username:</label>
-            <!-- <input type="text" id="username" v-model="username"> -->
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <!-- <input type="text" id="password" v-model="password"> -->
-        </div>
-        <!-- <button @click.prevent="submitLogin">Login</button> -->
-    </form>
-</template>
-
 <script setup lang="ts">
+import { ref } from 'vue';
 
-// export default Login {
-//     username: String = '';
-//     password: String = '';
+const username = ref('')
+const password = ref('')
 
-//     submitLogin() {
-//         // Perform Login request with API here
-//     }
-
-//     // methods: {
-//     //     submitLogin() {
-//     //         // Perform Login request with API here
-//     //         console.log('Username:', this.username);
-//     //         console.log('Password:', this.password);
-//     //     },
-//     // },
-// };
+const loginUser = () => {
+    console.log('Username: ', username)
+    console.log('Password: ', password)
+}
 </script>
 
-<style scoped>
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-}
-
-label,
-input {
-    width: 100%;
-    margin-bottom: 8px;
-    padding: 8px;
-}
-
-button {
-    width: 100%;
-    padding: 8px;
-}
-
-</style>
+<template>
+    <div>
+        <form @submit.prevent="loginUser">
+            <div>
+                <label for="user-name">Username</label>
+                <input type="text" id="user-name" v-model="username">
+            </div>
+            <div>
+                <label for="user-password">Password</label>
+                <input type="password" id="user-password" v-model="password">
+            </div>
+            <div>
+                <button>
+                    Login
+                </button>
+            </div>
+        </form>
+    </div>
+</template>
