@@ -13,6 +13,7 @@ import { RouterLink } from 'vue-router';
                     <RouterLink to="/about">About</RouterLink>
                     <RouterLink to="/team">Team</RouterLink>
                     <RouterLink to="/login">Login</RouterLink>
+                    <RouterLink to="/register">Sign Up</RouterLink>
                 </div>
             </nav>
         </div>
@@ -23,5 +24,12 @@ import { RouterLink } from 'vue-router';
 header {
     line-height: 1.5;
     max-height: 100vh;
+}
+
+nav a.router-link-exact-active {
+    color: var(--color-text);
+}
+nav a.router-link-exact-active:hover {
+    background-color: transparent;
 }
 </style>
