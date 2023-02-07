@@ -1,5 +1,10 @@
+<script setup lang="ts"></script>
 <template>
-    <div>
-        
-    </div>
+    <header>
+        <div>
+            <nav>
+
+            </nav>
+        </div>
+    </header>
 </template>
