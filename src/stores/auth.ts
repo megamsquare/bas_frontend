@@ -9,5 +9,5 @@ export const useAuthStore = defineStore("auth", () => {
 
     function logout() {}
 
-    return { isAuthenticated, token };
+    return { isAuthenticated, token, login, logout };
 });
