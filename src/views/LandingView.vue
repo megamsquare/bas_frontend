@@ -3,7 +3,7 @@ import Landing from '@/components/landing/Landing.vue'
 </script>
 
 <template>
-    <main>
+    <div class="welcome_align">
         <div class="left_side">
             <img src="@/assets/logo.svg" alt="Business Helper" class="business_logo" width="125" height="125" />
     
@@ -18,10 +18,18 @@ import Landing from '@/components/landing/Landing.vue'
         <div>
             <Landing />
         </div>
-    </main>
+    </div>
 </template>
 
 <style scoped>
+.welcome_align {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    font-weight: normal;
+}
+
 .left_side {
     line-height: 1.5;
     max-height: 100vh;
@@ -67,6 +75,12 @@ h3 {
     .greetings h1,
     .greetings h3 {
         text-align: left;
+    }
+
+    .welcome_align {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2rem;
     }
 }
 </style>
