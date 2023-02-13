@@ -6,4 +6,8 @@ import Landing from '@/components/landing/Landing.vue'
     <div>
         <img src="@/assets/logo.svg" alt="Business Helper" class="business_logo" width="125" height="125" />
     </div>
+
+    <div>
+        <Landing />
+    </div>
 </template>
