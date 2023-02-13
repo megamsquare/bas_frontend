@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import 
+import Landing from '@/components/landing/Landing.vue'
 </script>
 
 <template>
