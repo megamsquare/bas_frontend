@@ -3,17 +3,19 @@ import Landing from '@/components/landing/Landing.vue'
 </script>
 
 <template>
-    <div class="left_side">
-        <img src="@/assets/logo.svg" alt="Business Helper" class="business_logo" width="125" height="125" />
-
-        <div class="wrap_txt">
-            <h1>You are welcome</h1>
+    <main>
+        <div class="left_side">
+            <img src="@/assets/logo.svg" alt="Business Helper" class="business_logo" width="125" height="125" />
+    
+            <div class="wrap_txt">
+                <h1>You are welcome</h1>
+            </div>
         </div>
-    </div>
-
-    <div>
-        <Landing />
-    </div>
+    
+        <div>
+            <Landing />
+        </div>
+    </main>
 </template>
 
 <style scoped>
