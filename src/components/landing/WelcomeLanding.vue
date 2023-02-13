@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import WelcomeLandingItem from './WelcomeLandingItem.vue';
+import IconHome from '@/components/icons/IconHome.vue'
 </script>
 
 <template>
     <WelcomeLandingItem>
         <template #icon>
-            <img src="@/assets/home_logo.svg" alt="Home Logo">
+            <IconHome />
         </template>
 
         <template #heading>
