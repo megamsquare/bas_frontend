@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue';
+import { onMounted } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
 
 let route = useRoute();
