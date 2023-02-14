@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import WelcomeLanding from './WelcomeLanding.vue';
+import WelcomeLanding from './welcome/WelcomeLanding.vue';
 </script>
 
 <template>
