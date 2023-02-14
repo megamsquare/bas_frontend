@@ -10,7 +10,7 @@ import IconHome from '@/components/icons/IconHome.vue'
         </template>
 
         <template #heading>
-            Home
+            Platform
         </template>
 
         Vue’s
@@ -40,7 +40,7 @@ import IconHome from '@/components/icons/IconHome.vue'
         </template>
 
         <template #heading>
-            Home
+            How it works
         </template>
 
         Vue’s

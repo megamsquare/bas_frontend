@@ -59,11 +59,6 @@ header nav {
     margin: 0 auto;
 }
 
-header.scrolling {
-    background-color: var(--color-text);
-    padding: 0;
-}
-
 nav .get_started {
     display: flex;
 }
