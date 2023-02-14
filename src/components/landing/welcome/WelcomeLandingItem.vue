@@ -79,7 +79,7 @@ h3 {
         display: none;
     }
 
-    .item:first-of-type:after {
+    .item:last-of-type:after {
         display: none;
     }
 }
