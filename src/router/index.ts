@@ -21,11 +21,11 @@ const router = createRouter({
     },
     {
       path: '/register',
-      name: 'register',
+      name: 'sign_up',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/LoginView.vue')
+      component: () => import('../views/Sign_UpView.vue')
     },
     {
       path: '/about',
@@ -33,7 +33,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/LoginView.vue')
+      component: () => import('../views/AboutView.vue')
     },
     {
       path: '/team',
@@ -41,7 +41,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/LoginView.vue')
+      component: () => import('../views/TeamView.vue')
     }
   ],
 });
