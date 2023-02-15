@@ -18,15 +18,27 @@ function getRoute() {
             <nav>
                 <div class="logo">
                     <!-- Business Helper -->
-                    <img src="@/assets/logo.svg" alt="Business Helper" width=100 height=100>
+                    <RouterLink to="/">
+                        <img src="@/assets/logo.svg" alt="Business Helper" width=100 height=100>
+                    </RouterLink>
+                    
                 </div>
 
                 <div class="get_started">
 
                     <div class="landing_nav">
-                        <RouterLink to="/">Home</RouterLink>
+                        <div class="dropnav">
+                            <a href="">Platform</a>
+                            <div class="dropnav-content">
+                                <RouterLink to="/">HRMS</RouterLink>
+                                <RouterLink to="/about">CRMS</RouterLink>
+                                <RouterLink to="/">DMS</RouterLink>
+                                <RouterLink to="/">KPI</RouterLink>
+                            </div>
+                        </div>
+                        
                         <RouterLink to="/about">About</RouterLink>
-                        <RouterLink to="/team">Team</RouterLink>
+                        <RouterLink to="/team">Blog</RouterLink>
                     </div>
     
                     <div class="start_auth">
@@ -60,6 +72,10 @@ header nav {
 }
 
 nav .get_started {
+    display: flex;
+}
+
+nav .landing_nav{
     display: flex;
 }
 
@@ -98,6 +114,32 @@ nav .start_auth a {
     display: inline-block;
     padding: 0 1rem;
     font-size: large;
+}
+
+nav .dropnav {
+    position: relative;
+    display: inline-block;
+}
+
+nav .dropnav span {
+    font-weight: normal;
+    font-size: medium;
+    color: hsla(160, 100%, 37%, 1);
+    padding: 0 0.5rem;
+    margin-top: 4px;
+}
+
+.dropnav .dropnav-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160;
+    box-shadow: 0 8px 16px 6px rgba(0,0,0,2);
+    z-index: 1;
+}
+
+.dropnav:hover .dropnav-content {
+    display: block;
 }
 
 </style>
