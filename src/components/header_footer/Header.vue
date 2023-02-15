@@ -28,7 +28,7 @@ function getRoute() {
 
                     <div class="landing_nav">
                         <div class="dropnav">
-                            <a href="">Platform</a>
+                            <a href:>Platform</a>
                             <div class="dropnav-content">
                                 <RouterLink to="/">HRMS</RouterLink>
                                 <RouterLink to="/about">CRMS</RouterLink>
