@@ -25,6 +25,7 @@ import Landing from '@/components/landing/Landing.vue'
 section.welcome_align {
     height: 100vh;
     align-items: center;
+    padding: 0 100px;
 
 }
 
