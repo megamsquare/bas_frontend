@@ -6,11 +6,11 @@ import Landing from '@/components/landing/Landing.vue'
     <section class="welcome_align">
         <Landing />
     </section>
-    <!-- <sectionS class="section-1">
+    <sectionS class="section-1">
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab similique ex eaque est sapiente optio rerum incidunt placeat et adipisci, esse facere mollitia ipsum minus ea modi quasi sequi quidem architecto. Solut a quae perferendis maiores ad deserunt, deleniti ipsa.
         </p>
-    </sectionS> -->
+    </sectionS>
 </template>
 
 <style scoped>
@@ -20,13 +20,17 @@ import Landing from '@/components/landing/Landing.vue'
     padding: 2rem;
 
     font-weight: normal;
+
 }
 
-section.welcome_align {
-    height: 100vh;
-    align-items: center;
-    padding: 0 100px;
+section {
+    padding: 100px 32px;
+}
 
+section p {
+    line-height: 2;
+    max-width: 900px;
+    margin: 32px auto;
 }
 
 @media (min-width: 1024px) {
@@ -36,5 +40,11 @@ section.welcome_align {
         grid-template-columns: 1fr 1fr;
         padding: 0 2rem;
     }
+
+    /* section.welcome_align {
+        height: 100vh;
+        align-items: center;
+        padding: 0 0px;
+    } */
 }
 </style>

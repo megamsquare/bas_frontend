@@ -61,6 +61,7 @@ header {
     left: 0;
     right: 0;
     padding: 8px 0;
+    transition: all 500ms;
 }
 
 header nav {
