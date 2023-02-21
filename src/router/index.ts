@@ -25,7 +25,7 @@ const router = createRouter({
         {
           path: 'company',
           name: 'company',
-          component:  () => import('../views/about_files/Company.vue')
+          component:  () => import('../views/about_files/CompanyView.vue')
         },
         {
           path: 'team',
@@ -41,11 +41,21 @@ const router = createRouter({
         {
           path: 'hrms',
           name: 'hrms',
-          component:  () => import('../views/about_files/Company.vue')
+          component:  () => import('../views/about_files/CompanyView.vue')
         },
         {
           path: 'crms',
           name: 'crms',
+          component:  () => import('../views/about_files/TeamView.vue')
+        },
+        {
+          path: 'dms',
+          name: 'dms',
+          component:  () => import('../views/about_files/TeamView.vue')
+        },
+        {
+          path: 'kpi',
+          name: 'kpi',
           component:  () => import('../views/about_files/TeamView.vue')
         }
       ]
