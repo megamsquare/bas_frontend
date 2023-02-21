@@ -17,7 +17,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/LoginView.vue')
+      component: () => import('../views/auth_files/LoginView.vue')
     },
     {
       path: '/register',
@@ -25,7 +25,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Sign_UpView.vue')
+      component: () => import('../views/auth_files/Sign_UpView.vue')
     },
     {
       path: '/about',
@@ -33,7 +33,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Company.vue')
+      component: () => import('../views/about_files/Company.vue')
     },
     {
       path: '/team',
@@ -41,7 +41,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/TeamView.vue')
+      component: () => import('../views/about_files/TeamView.vue')
     }
   ],
 });
