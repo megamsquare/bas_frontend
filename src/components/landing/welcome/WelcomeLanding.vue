@@ -15,10 +15,10 @@ import IconHome from '@/components/icons/IconHome.vue'
 
         We deal with day-to-day business activities, we simplify every process to make life easy for you <p>some of our day-to-day dealings are: </p>
         <div class="home-platform">
-            <RouterLink to="/">HRMS</RouterLink>
-            <RouterLink to="/about">CRMS</RouterLink>
-            <RouterLink to="/">DMS</RouterLink>
-            <RouterLink to="/">KPI</RouterLink>
+            <RouterLink :to="{name: 'hrms'}">HRMS</RouterLink>
+            <RouterLink :to="{name: 'crms'}">CRMS</RouterLink>
+            <RouterLink :to="{name: 'dms'}">DMS</RouterLink>
+            <RouterLink :to="{name: 'kpi'}">KPI</RouterLink>
         </div>
     </WelcomeLandingItem>
 
@@ -34,8 +34,8 @@ import IconHome from '@/components/icons/IconHome.vue'
 
         Our main focus is to main daily business activities easier for every business owner, <p> You can fine more about us by clicking the: </p>
         <div class="home-platform">
-            <RouterLink to="/">Company</RouterLink>
-            <RouterLink to="/about">Team</RouterLink>
+            <RouterLink :to="{name: 'company'}">Company</RouterLink>
+            <RouterLink :to="{name: 'team'}">Team</RouterLink>
         </div>
     </WelcomeLandingItem>
 
@@ -52,7 +52,7 @@ import IconHome from '@/components/icons/IconHome.vue'
         You can get more new from us and tips on day to day activities in business life. 
         <p>Visit our blog for more: </p>
         <div class="home-platform">
-            <RouterLink to="/">Blog</RouterLink>
+            <RouterLink to="/blog">Blog</RouterLink>
         </div>
     </WelcomeLandingItem>
 </template>
