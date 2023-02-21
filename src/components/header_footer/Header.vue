@@ -45,8 +45,15 @@ function getRoute() {
                                 <RouterLink to="/">KPI</RouterLink>
                             </div>
                         </div>
+
+                        <div class="dropnav">
+                            <a href="#"> About </a>
+                            <div class="dropnav-content">
+                                <RouterLink to="/about">Company</RouterLink>
+                                <RouterLink to="/about">Team</RouterLink>
+                            </div>
+                        </div>
                         
-                        <RouterLink to="/about">About</RouterLink>
                         <RouterLink to="/team">Blog</RouterLink>
                     </div>
     
