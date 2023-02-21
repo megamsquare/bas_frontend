@@ -39,10 +39,10 @@ function getRoute() {
                         <div class="dropnav">
                             <a href="#">Platform</a>
                             <div class="dropnav-content">
-                                <RouterLink to="/">HRMS</RouterLink>
-                                <RouterLink to="/about">CRMS</RouterLink>
-                                <RouterLink to="/">DMS</RouterLink>
-                                <RouterLink to="/">KPI</RouterLink>
+                                <RouterLink :to="{name: 'hrms'}">HRMS</RouterLink>
+                                <RouterLink :to="{name: 'crms'}">CRMS</RouterLink>
+                                <RouterLink :to="{name: 'dms'}">DMS</RouterLink>
+                                <RouterLink :to="{name: 'kpi'}">KPI</RouterLink>
                             </div>
                         </div>
 

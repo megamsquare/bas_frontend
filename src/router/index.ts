@@ -41,22 +41,22 @@ const router = createRouter({
         {
           path: 'hrms',
           name: 'hrms',
-          component:  () => import('../views/about_files/CompanyView.vue')
+          component:  () => import('../views/platform_files/HRMSView.vue')
         },
         {
           path: 'crms',
           name: 'crms',
-          component:  () => import('../views/about_files/TeamView.vue')
+          component:  () => import('../views/platform_files/CRMSView.vue')
         },
         {
           path: 'dms',
           name: 'dms',
-          component:  () => import('../views/about_files/TeamView.vue')
+          component:  () => import('../views/platform_files/DMSView.vue')
         },
         {
           path: 'kpi',
           name: 'kpi',
-          component:  () => import('../views/about_files/TeamView.vue')
+          component:  () => import('../views/platform_files/KPIView.vue')
         }
       ]
     },
