@@ -49,12 +49,12 @@ function getRoute() {
                         <div class="dropnav">
                             <a href="#"> About </a>
                             <div class="dropnav-content">
-                                <RouterLink to="/about">Company</RouterLink>
-                                <RouterLink to="/about">Team</RouterLink>
+                                <RouterLink :to="{name: 'company'}">Company</RouterLink>
+                                <RouterLink :to="{name: 'team'}">Team</RouterLink>
                             </div>
                         </div>
                         
-                        <RouterLink to="/team">Blog</RouterLink>
+                        <RouterLink to="/blog">Blog</RouterLink>
                     </div>
     
                     <div class="start_auth">
