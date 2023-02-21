@@ -13,9 +13,13 @@ import IconHome from '@/components/icons/IconHome.vue'
             Platform
         </template>
 
-        Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+        We deal with day-to-day business activities, we simplify every process to make life easy for you <p>some of our day-to-day dealings are: </p>
+        <div class="home-platform">
+            <RouterLink to="/">HRMS</RouterLink>
+            <RouterLink to="/about">CRMS</RouterLink>
+            <RouterLink to="/">DMS</RouterLink>
+            <RouterLink to="/">KPI</RouterLink>
+        </div>
     </WelcomeLandingItem>
 
 
@@ -48,3 +52,11 @@ import IconHome from '@/components/icons/IconHome.vue'
     provides you with all information you need to get started.
     </WelcomeLandingItem>
 </template>
+
+<style scoped>
+.home-platform a {
+    display: inline-block;
+    padding: 0 0.5rem;
+    margin-top: 4px;
+}
+</style>

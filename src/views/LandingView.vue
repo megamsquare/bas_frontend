@@ -6,11 +6,11 @@ import Landing from '@/components/landing/Landing.vue'
     <section class="welcome_align">
         <Landing />
     </section>
-    <sectionS class="section-1">
+    <!-- <sectionS class="section-1">
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab similique ex eaque est sapiente optio rerum incidunt placeat et adipisci, esse facere mollitia ipsum minus ea modi quasi sequi quidem architecto. Solut a quae perferendis maiores ad deserunt, deleniti ipsa.
         </p>
-    </sectionS>
+    </sectionS> -->
 </template>
 
 <style scoped>

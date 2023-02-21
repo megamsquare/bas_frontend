@@ -1,15 +1,20 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
 
 let route = useRoute();
 
 onMounted(() => {
-    
-}),
+    console.log("onMounted: ", route)
+    getRoute();
+});
+
+onUnmounted(() => {
+    console.log("onUnmounted", route)
+})
 
 function getRoute() {
-    console.log(route.name)
+    console.log("router name: ", route.name)
 }
 </script>
 <template>
@@ -23,6 +28,10 @@ function getRoute() {
                     </RouterLink>
                     
                 </div>
+
+                <!-- <div>
+                    <button @click="getRoute"></button>
+                </div> -->
 
                 <div class="get_started">
 
