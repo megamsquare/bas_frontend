@@ -29,12 +29,14 @@ import IconHome from '@/components/icons/IconHome.vue'
         </template>
 
         <template #heading>
-            Home
+            About
         </template>
 
-        Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+        Our main focus is to main daily business activities easier for every business owner, <p> You can fine more about us by clicking the: </p>
+        <div class="home-platform">
+            <RouterLink to="/">Company</RouterLink>
+            <RouterLink to="/about">Team</RouterLink>
+        </div>
     </WelcomeLandingItem>
 
 
