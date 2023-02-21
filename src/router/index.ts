@@ -6,43 +6,65 @@ const router = createRouter({
     {
       path: '/',
       name: 'landing',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/LandingView.vue')
     },
     {
       path: '/login',
       name: 'login',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/LoginView.vue')
+      component: () => import('../views/auth_files/LoginView.vue')
     },
     {
       path: '/register',
       name: 'sign_up',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Sign_UpView.vue')
+      component: () => import('../views/auth_files/Sign_UpView.vue')
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      children: [
+        {
+          path: 'company',
+          name: 'company',
+          component:  () => import('../views/about_files/CompanyView.vue')
+        },
+        {
+          path: 'team',
+          name: 'team',
+          component:  () => import('../views/about_files/TeamView.vue')
+        }
+      ]
     },
     {
-      path: '/team',
-      name: 'team',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/TeamView.vue')
-    }
+      path: '/platform',
+      name: 'platform',
+      children: [
+        {
+          path: 'hrms',
+          name: 'hrms',
+          component:  () => import('../views/platform_files/HRMSView.vue')
+        },
+        {
+          path: 'crms',
+          name: 'crms',
+          component:  () => import('../views/platform_files/CRMSView.vue')
+        },
+        {
+          path: 'dms',
+          name: 'dms',
+          component:  () => import('../views/platform_files/DMSView.vue')
+        },
+        {
+          path: 'kpi',
+          name: 'kpi',
+          component:  () => import('../views/platform_files/KPIView.vue')
+        }
+      ]
+    },
+    {
+      path: '/blog',
+      name: 'blog',
+      component: () => import('../views/blog_files/BlogView.vue')
+    },
   ],
 });
 

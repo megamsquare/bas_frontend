@@ -10,12 +10,16 @@ import IconHome from '@/components/icons/IconHome.vue'
         </template>
 
         <template #heading>
-            Home
+            Platform
         </template>
 
-        Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+        We deal with day-to-day business activities, we simplify every process to make life easy for you <p>some of our day-to-day dealings are: </p>
+        <div class="home-platform">
+            <RouterLink :to="{name: 'hrms'}">HRMS</RouterLink>
+            <RouterLink :to="{name: 'crms'}">CRMS</RouterLink>
+            <RouterLink :to="{name: 'dms'}">DMS</RouterLink>
+            <RouterLink :to="{name: 'kpi'}">KPI</RouterLink>
+        </div>
     </WelcomeLandingItem>
 
 
@@ -25,12 +29,14 @@ import IconHome from '@/components/icons/IconHome.vue'
         </template>
 
         <template #heading>
-            Home
+            About
         </template>
 
-        Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+        Our main focus is to main daily business activities easier for every business owner, <p> You can fine more about us by clicking the: </p>
+        <div class="home-platform">
+            <RouterLink :to="{name: 'company'}">Company</RouterLink>
+            <RouterLink :to="{name: 'team'}">Team</RouterLink>
+        </div>
     </WelcomeLandingItem>
 
 
@@ -40,11 +46,21 @@ import IconHome from '@/components/icons/IconHome.vue'
         </template>
 
         <template #heading>
-            Home
+            Blog
         </template>
 
-        Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+        You can get more new from us and tips on day to day activities in business life. 
+        <p>Visit our blog for more: </p>
+        <div class="home-platform">
+            <RouterLink to="/blog">Blog</RouterLink>
+        </div>
     </WelcomeLandingItem>
 </template>
+
+<style scoped>
+.home-platform a {
+    display: inline-block;
+    padding: 0 0.5rem;
+    margin-top: 4px;
+}
+</style>
