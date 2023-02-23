@@ -78,6 +78,7 @@ header {
     right: 0;
     padding: 8px 0;
     transition: all 500ms;
+    z-index: 10000;
 }
 
 header nav {
