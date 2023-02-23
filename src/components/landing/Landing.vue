@@ -71,8 +71,7 @@ section {
     padding: 100px 32px;
 }
 
-.section-1 p,
-.section-2 p {
+section p {
     line-height: 2;
     max-width: 900px;
     margin: 32px auto;
