@@ -25,6 +25,12 @@ import WelcomeLanding from './welcome/WelcomeLanding.vue';
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab similique ex eaque est sapiente optio rerum incidunt placeat et adipisci, esse facere mollitia ipsum minus ea modi quasi sequi quidem architecto. Solut a quae perferendis maiores ad deserunt, deleniti ipsa.
         </p>
     </section>
+    
+    <section class="section-2">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab similique ex eaque est sapiente optio rerum incidunt placeat et adipisci, esse facere mollitia ipsum minus ea modi quasi sequi quidem architecto. Solut a quae perferendis maiores ad deserunt, deleniti ipsa.
+        </p>
+    </section>
 </template>
 
 <style scoped>
@@ -65,7 +71,8 @@ section {
     padding: 100px 32px;
 }
 
-.section-1 p {
+.section-1 p,
+.section-2 p {
     line-height: 2;
     max-width: 900px;
     margin: 32px auto;
