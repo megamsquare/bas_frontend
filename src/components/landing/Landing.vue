@@ -21,6 +21,7 @@ import WelcomeLanding from './welcome/WelcomeLanding.vue';
     </section>
     
     <section class="section-1">
+        <img src="@/assets/Browsing-online.svg" alt="">
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab similique ex eaque est sapiente optio rerum incidunt placeat et adipisci, esse facere mollitia ipsum minus ea modi quasi sequi quidem architecto. Solut a quae perferendis maiores ad deserunt, deleniti ipsa.
         </p>
@@ -77,6 +78,13 @@ section p {
     margin: 32px auto;
 }
 
+.section-1 img {
+    position: absolute;
+    left: 0;
+    top: 22.5%;
+    height: 60;
+}
+
 @media (min-width: 1024px) {
     .left_side {
         display: flex;
@@ -108,7 +116,6 @@ section p {
     section.welcome_align {
         height: 100vh;
         align-items: center;
-        padding: 0 0px;
     }
 }
 </style>
