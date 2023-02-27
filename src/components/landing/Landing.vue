@@ -24,9 +24,9 @@ import WelcomeLanding from './welcome/WelcomeLanding.vue';
         <img src="@/assets/Browsing-online.svg" alt="">
         <div class="section-1-right">
             <h1>Topic</h1>
-            <p>
+            <h3>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab similique ex eaque est sapiente optio rerum incidunt placeat et adipisci, esse facere mollitia ipsum minus ea modi quasi sequi quidem architecto. Solut a quae perferendis maiores ad deserunt, deleniti ipsa.
-            </p>
+            </h3>
         </div>
     </section>
     
