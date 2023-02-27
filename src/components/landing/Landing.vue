@@ -20,9 +20,9 @@ import LandingSection from '../landing/sections/LandingSection.vue';
             <WelcomeLanding />
         </div>
     </section>
-        <LandingSection />
-    <section>
 
+    <section>
+        <LandingSection />
     </section>
     
     <!-- <section class="section-1">
@@ -86,11 +86,6 @@ section p {
     margin: 32px auto;
 }
 
-.section-1 img {
-    display: block;
-    margin: 0 auto 2rem;
-}
-
 @media (min-width: 1024px) {
     .left_side {
         display: flex;
@@ -124,14 +119,10 @@ section p {
         align-items: center;
     }
 
-    .section-1 {
+    /* .section-1 {
         display: flex;
         place-items: center;
-    }
-
-    .section-1 img {
-        margin: 0 2rem 0 0;
-    }
+    } */
 
     
 }

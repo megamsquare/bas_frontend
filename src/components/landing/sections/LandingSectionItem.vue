@@ -8,4 +8,12 @@
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+@media (min-width: 1024px) {
+    .section-1 {
+        display: flex;
+        place-items: center;
+    }
+}
+</style>
