@@ -22,9 +22,11 @@ import WelcomeLanding from './welcome/WelcomeLanding.vue';
     
     <section class="section-1">
         <img src="@/assets/Browsing-online.svg" alt="">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab similique ex eaque est sapiente optio rerum incidunt placeat et adipisci, esse facere mollitia ipsum minus ea modi quasi sequi quidem architecto. Solut a quae perferendis maiores ad deserunt, deleniti ipsa.
-        </p>
+        <div class="section-1-right">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab similique ex eaque est sapiente optio rerum incidunt placeat et adipisci, esse facere mollitia ipsum minus ea modi quasi sequi quidem architecto. Solut a quae perferendis maiores ad deserunt, deleniti ipsa.
+            </p>
+        </div>
     </section>
     
     <section class="section-2">
@@ -79,10 +81,8 @@ section p {
 }
 
 .section-1 img {
-    position: absolute;
-    left: 0;
-    top: 22.5%;
-    height: 60;
+    display: block;
+    margin: 0 auto 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -117,5 +117,16 @@ section p {
         height: 100vh;
         align-items: center;
     }
+
+    .section-1 {
+        display: flex;
+        place-items: center;
+    }
+
+    .section-1 img {
+        margin: 0 2rem 0 0;
+    }
+
+    
 }
 </style>
