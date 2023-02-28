@@ -80,12 +80,6 @@ section {
     padding: 100px 32px;
 }
 
-section p {
-    line-height: 2;
-    max-width: 900px;
-    margin: 32px auto;
-}
-
 @media (min-width: 1024px) {
     .left_side {
         display: flex;
