@@ -8,7 +8,7 @@ import LandingSectionItem from './LandingSectionItem.vue';
             <img src="@/assets/Browsing-online.svg" alt="">
         </template>
         <template #right-section>
-            <div>
+            <div class="">
                 <h1> Topic </h1>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, enim magni aperiam eos dolore cupiditate consectetur. Hic eveniet nulla iusto dolorum, corporis et esse, deserunt totam veniam illum iure error eos. Ipsum eligendi quasi odit cum deleniti exercitationem, cupiditate rem ea, similique nam iure in distinctio velit quaerat laborum veritatis.
@@ -30,6 +30,8 @@ img {
 
     img {
         margin: 0 1rem 0 0;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
     
 }
