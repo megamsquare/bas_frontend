@@ -1,20 +1,22 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue';
-import { RouterLink, useRoute } from 'vue-router';
+import { RouterLink, useRoute, useRouter } from 'vue-router';
 
 let route = useRoute();
+let router = useRouter();
 
 onMounted(() => {
     console.log("onMounted: ", route)
-    getRoute();
+    getRoute('onMounted');
 });
 
 onUnmounted(() => {
     console.log("onUnmounted", route)
+    getRoute('onUnmounted');
 })
 
-function getRoute() {
-    console.log("router name: ", route.name)
+function getRoute(value: string) {
+    console.log(value +" router name: ", route.fullPath)
 }
 </script>
 <template>
