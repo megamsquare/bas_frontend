@@ -1,24 +1,21 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted, watch } from 'vue';
 import { RouterLink, useRoute, useRouter } from 'vue-router';
+import { useRoutingStore } from "@/stores/routing";
 
 let route = useRoute();
-let router = useRouter();
 
-onMounted(() => {
-    console.log("onMounted: ", route)
-    
-    getRoute('onMounted');
+
+watch(route, (to) => {
+    getRoute(to.name)
 });
 
-// onUnmounted(() => {
-//     console.log("onUnmounted", route)
-//     getRoute('onUnmounted');
-// })
-
-function getRoute(value: string) {
-    console.log(value +" route name: ", route.name)
-    console.log(value +" router name: ", router.hasRoute('landing'))
+function getRoute(base: string) {
+    if (base == 'landing') {
+        console.log("this is curent value: ", base)
+    } else {
+        console.log("go back home")
+    }
 }
 </script>
 <template>
