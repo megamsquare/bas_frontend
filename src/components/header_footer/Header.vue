@@ -5,18 +5,19 @@ import { useRoutingStore } from "@/stores/routing";
 
 let route = useRoute();
 
-
 watch(route, (to) => {
-    getRoute(to.name)
-});
-
-function getRoute(base: string) {
-    if (base == 'landing') {
-        console.log("this is curent value: ", base)
+    if (to.name == 'landing') {
+        console.log("this is curent value: ", to.name)
     } else {
         console.log("go back home")
     }
-}
+});
+
+function doScroll() {}
+
+onMounted(() => {
+    
+})
 </script>
 <template>
     <header>
