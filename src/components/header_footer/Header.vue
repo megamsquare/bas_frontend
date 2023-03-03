@@ -7,16 +7,18 @@ let router = useRouter();
 
 onMounted(() => {
     console.log("onMounted: ", route)
+    
     getRoute('onMounted');
 });
 
-onUnmounted(() => {
-    console.log("onUnmounted", route)
-    getRoute('onUnmounted');
-})
+// onUnmounted(() => {
+//     console.log("onUnmounted", route)
+//     getRoute('onUnmounted');
+// })
 
 function getRoute(value: string) {
-    console.log(value +" router name: ", route.fullPath)
+    console.log(value +" route name: ", route.name)
+    console.log(value +" router name: ", router.hasRoute('landing'))
 }
 </script>
 <template>
