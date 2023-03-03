@@ -1,22 +1,45 @@
 <script setup lang="ts">
 import WelcomeLanding from './welcome/WelcomeLanding.vue';
+import LandingSection from '../landing/sections/LandingSection.vue';
 </script>
 
 <template>
-    <div class="left_side">
-        <img src="@/assets/logo.svg" alt="Business Helper" class="business_logo" width="125" height="125" />
-
-        <div class="wrap_txt">
-            <div class="greetings">
-                <h1 class="green">You are welcome</h1>
-                <h3></h3>
+    <section class="welcome_align">
+        <div class="left_side">
+            <img src="@/assets/logo.svg" alt="Business Helper" class="business_logo" width="125" height="125" />
+    
+            <div class="wrap_txt">
+                <div class="greetings">
+                    <h1 class="green">You are welcome</h1>
+                    <h3></h3>
+                </div>
             </div>
         </div>
-    </div>
+    
+        <div>
+            <WelcomeLanding />
+        </div>
+    </section>
 
-    <div>
-        <WelcomeLanding />
-    </div>
+    <section>
+        <LandingSection />
+    </section>
+    
+    <!-- <section class="section-1">
+        <img src="@/assets/Browsing-online.svg" alt="">
+        <div class="section-1-right">
+            <h1>Topic</h1>
+            <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab similique ex eaque est sapiente optio rerum incidunt placeat et adipisci, esse facere mollitia ipsum minus ea modi quasi sequi quidem architecto. Solut a quae perferendis maiores ad deserunt, deleniti ipsa.
+            </h3>
+        </div>
+    </section>
+    
+    <section class="section-2">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab similique ex eaque est sapiente optio rerum incidunt placeat et adipisci, esse facere mollitia ipsum minus ea modi quasi sequi quidem architecto. Solut a quae perferendis maiores ad deserunt, deleniti ipsa.
+        </p>
+    </section> -->
 </template>
 
 <style scoped>
@@ -45,6 +68,17 @@ h3 {
 .greetings h3 {
     text-align: center;
 }
+.welcome_align {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-weight: normal;
+}
+
+section {
+    display: absolute;
+    padding: 100px 32px;
+}
 
 @media (min-width: 1024px) {
     .left_side {
@@ -67,5 +101,23 @@ h3 {
     .greetings h3 {
         text-align: left;
     }
+
+    .welcome_align {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2rem;
+    }
+
+    section.welcome_align {
+        height: 100vh;
+        align-items: center;
+    }
+
+    /* .section-1 {
+        display: flex;
+        place-items: center;
+    } */
+
+    
 }
 </style>

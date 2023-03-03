@@ -1,20 +1,24 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue';
-import { RouterLink, useRoute } from 'vue-router';
+import { RouterLink, useRoute, useRouter } from 'vue-router';
 
 let route = useRoute();
+let router = useRouter();
 
 onMounted(() => {
     console.log("onMounted: ", route)
-    getRoute();
+    
+    getRoute('onMounted');
 });
 
-onUnmounted(() => {
-    console.log("onUnmounted", route)
-})
+// onUnmounted(() => {
+//     console.log("onUnmounted", route)
+//     getRoute('onUnmounted');
+// })
 
-function getRoute() {
-    console.log("router name: ", route.name)
+function getRoute(value: string) {
+    console.log(value +" route name: ", route.name)
+    console.log(value +" router name: ", router.hasRoute('landing'))
 }
 </script>
 <template>
@@ -78,6 +82,7 @@ header {
     right: 0;
     padding: 8px 0;
     transition: all 500ms;
+    z-index: 10000;
 }
 
 header nav {
