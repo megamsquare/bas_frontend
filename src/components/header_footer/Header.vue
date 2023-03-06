@@ -13,8 +13,6 @@ watch(route, (to) => {
     }
 });
 
-function doScroll() {}
-
 onMounted(() => {
     
 })
