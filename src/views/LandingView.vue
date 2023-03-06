@@ -1,17 +1,9 @@
 <script setup lang="ts">
-import Landing from '@/components/landing/Landing.vue';
-
-
-
-function doScroll(event: any) {
-    console.log(event)
-}
+import Landing from '@/components/landing/Landing.vue'
 </script>
 
 <template>
-     <div @scroll="doScroll">
-          <Landing />
-     </div>
+     <Landing />
 </template>
 
 <style scoped>
