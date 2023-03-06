@@ -4,19 +4,28 @@ import { RouterLink, useRoute } from 'vue-router';
 import { useRoutingStore } from "@/stores/routing";
 
 let route = useRoute();
-const handleRef = ref()
+const handleRef = ref();
+let isLanding = ref(false);
+
+onMounted(() => {
+    if (isLanding.value = true) {
+        var prev = window.pageYOffset;
+        window.addEventListener("scroll", () => {
+            console.log(window.pageYOffset)
+        })
+    }
+
+}),
 
 watch(route, (to) => {
     if (to.name == 'landing') {
+        isLanding.value = true;
         console.log("this is curent value: ", to.name)
     } else {
+        isLanding.value = false;
         console.log("go back home")
     }
 });
-
-onMounted(() => {
-    
-})
 </script>
 <template>
     <header ref="handleRef">
