@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { onMounted, watch } from 'vue';
-import { RouterLink, useRoute, useRouter } from 'vue-router';
+import { onMounted, ref, watch } from 'vue';
+import { RouterLink, useRoute } from 'vue-router';
 import { useRoutingStore } from "@/stores/routing";
 
 let route = useRoute();
+const handleRef = ref()
 
 watch(route, (to) => {
     if (to.name == 'landing') {
@@ -18,7 +19,7 @@ onMounted(() => {
 })
 </script>
 <template>
-    <header>
+    <header ref="handleRef">
         <div class="wrapper">
             <nav>
                 <div class="logo">
