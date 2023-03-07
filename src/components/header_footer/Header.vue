@@ -31,7 +31,7 @@ watch(route, (to) => {
 });
 </script>
 <template>
-    <header ref="handleRef" class="scrolling">
+    <header ref="handleRef">
         <div class="wrapper">
             <nav>
                 <div class="logo">
