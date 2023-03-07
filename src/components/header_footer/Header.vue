@@ -6,33 +6,32 @@ import { useRoutingStore } from "@/stores/routing";
 
 let route = useRoute();
 const handleRef = ref();
-let isLanding = ref(false);
 let logoHeight = ref("50");
 let logoWidth = ref("50");
 
 watch(route, (to) => {
     if (to.name == 'landing') {
-        isLanding.value = true;
         handleRef.value.classList.add("landingScroll");
         window.addEventListener("scroll", () => {
             if (window.scrollY > 360) {
+                logoHeight.value = "24";
+                logoWidth.value = "24";
                 handleRef.value.classList.remove("landingScroll");
                 handleRef.value.classList.add("scrolling")
             } else {
+                logoHeight.value = "50";
+                logoWidth.value = "50";
                 handleRef.value.classList.add("landingScroll");
                 handleRef.value.classList.remove("scrolling");
             }
         })
-        console.log("this is curent value: ", to.name)
     } else {
-        isLanding.value = false;
         handleRef.value.classList.remove("landingScroll");
         if (window.scrollY > 36) {
             handleRef.value.classList.add("scrolling")
         } else {
             handleRef.value.classList.remove("scrolling");
         }
-        console.log("go back home")
     }
 });
 </script>
@@ -43,15 +42,10 @@ watch(route, (to) => {
                 <div class="logo">
                     <!-- Business Helper -->
                     <RouterLink to="/">
-                        <!-- <img src="@/assets/logo.svg" alt="Business Helper" width=50 height=50> -->
                         <Logo :height=logoHeight :width=logoWidth />
                     </RouterLink>
                     
                 </div>
-
-                <!-- <div>
-                    <button @click="getRoute"></button>
-                </div> -->
 
                 <div class="get_started">
 
