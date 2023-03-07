@@ -2,7 +2,6 @@
 import { ref, watch } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
 import Logo from '../icons/logo/Logo.vue';
-import { useRoutingStore } from "@/stores/routing";
 
 let route = useRoute();
 const handleRef = ref();
@@ -16,31 +15,26 @@ watch(route, (to) => {
             if (window.scrollY > 360) {
                 logoHeight.value = "24";
                 logoWidth.value = "24";
-                if (handleRef.value.classList.contains("landingScroll")) {
-                    handleRef.value.classList.remove("landingScroll");
-                }
-                
+                handleRef.value.classList.remove("landingScroll");
                 handleRef.value.classList.add("scrolling")
             } else {
-                logoHeight.value = "50";
-                logoWidth.value = "50";
-                if (!handleRef.value.classList.contains("landingScroll")) {
-                    handleRef.value.classList.add("landingScroll");
-                }
-                
+                handleRef.value.classList.add("landingScroll");
                 handleRef.value.classList.remove("scrolling");
             }
         })
     } else {
-        if (handleRef.value.classList.contains("landingScroll")) {
-            handleRef.value.classList.remove("landingScroll");
-        }
-        
-        if (window.scrollY > 36) {
-            handleRef.value.classList.add("scrolling")
-        } else {
-            handleRef.value.classList.remove("scrolling");
-        }
+        handleRef.value.classList.remove("landingScroll");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 36) {
+                logoHeight.value = "24";
+                logoWidth.value = "24";
+                handleRef.value.classList.add("scrolling");
+            } else {
+                logoHeight.value = "50";
+                logoWidth.value = "50";
+                handleRef.value.classList.remove("scrolling");
+            }
+        })
     }
 });
 </script>
@@ -192,6 +186,7 @@ nav .dropnav span {
 
     header.landingScroll {
         display: none;
+        transition: all 500ms ease;
     }
 }
 
