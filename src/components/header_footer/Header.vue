@@ -7,25 +7,31 @@ import { useRoutingStore } from "@/stores/routing";
 let route = useRoute();
 const handleRef = ref();
 let isLanding = ref(false);
-let logoHeight = ref();
-let logoWidth = ref();
-
-onMounted(() => {
-    if (isLanding.value = true) {
-        var prev = window.pageYOffset;
-        window.addEventListener("scroll", () => {
-            console.log(window.pageYOffset)
-        })
-    }
-
-}),
+let logoHeight = ref("50");
+let logoWidth = ref("50");
 
 watch(route, (to) => {
     if (to.name == 'landing') {
         isLanding.value = true;
+        handleRef.value.classList.add("landingScroll");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 360) {
+                handleRef.value.classList.remove("landingScroll");
+                handleRef.value.classList.add("scrolling")
+            } else {
+                handleRef.value.classList.add("landingScroll");
+                handleRef.value.classList.remove("scrolling");
+            }
+        })
         console.log("this is curent value: ", to.name)
     } else {
         isLanding.value = false;
+        handleRef.value.classList.remove("landingScroll");
+        if (window.scrollY > 36) {
+            handleRef.value.classList.add("scrolling")
+        } else {
+            handleRef.value.classList.remove("scrolling");
+        }
         console.log("go back home")
     }
 });
@@ -38,7 +44,7 @@ watch(route, (to) => {
                     <!-- Business Helper -->
                     <RouterLink to="/">
                         <!-- <img src="@/assets/logo.svg" alt="Business Helper" width=50 height=50> -->
-                        <Logo  height=50 width=50 />
+                        <Logo :height=logoHeight :width=logoWidth />
                     </RouterLink>
                     
                 </div>
@@ -165,7 +171,7 @@ nav .dropnav span {
 .dropnav .dropnav-content {
     display: none;
     position: absolute;
-    background-color: transparent;
+    background-color: var(--color-background);
     min-width: 160;
     box-shadow: 0 8px 16px 6px rgba(0,0,0,2);
     z-index: 1;
@@ -181,9 +187,8 @@ nav .dropnav span {
         padding: 0;
     }
 
-    header.scrolling .logo {
-        height: 24;
-        width: 24;
+    header.landingScroll {
+        display: none;
     }
 }
 
