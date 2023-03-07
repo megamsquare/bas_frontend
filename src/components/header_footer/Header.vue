@@ -192,7 +192,6 @@ nav .dropnav span {
 
     header.landingScroll {
         display: none;
-        transition: all 500ms ease;
     }
 }
 
