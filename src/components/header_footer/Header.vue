@@ -8,33 +8,39 @@ const handleRef = ref();
 let logoHeight = ref("50");
 let logoWidth = ref("50");
 
+function doLandingScroll(event: any) {
+    const scrollY = event.currentTarget.scrollY;
+    if (scrollY > 360) {
+        logoHeight.value = "24";
+        logoWidth.value = "24";
+        handleRef.value.classList.remove("landingScroll");
+        handleRef.value.classList.add("scrolling")
+    } else {
+        handleRef.value.classList.add("landingScroll");
+        handleRef.value.classList.remove("scrolling");
+    }
+}
+
+function doOtherPageScroll(event: any) {
+    const scrollY = event.currentTarget.scrollY;
+    if (scrollY > 36) {
+        logoHeight.value = "24";
+        logoWidth.value = "24";
+        handleRef.value.classList.add("scrolling");
+    } else {
+        logoHeight.value = "50";
+        logoWidth.value = "50";
+        handleRef.value.classList.remove("scrolling");
+    }
+}
+
 watch(route, (to) => {
     if (to.name == 'landing') {
         handleRef.value.classList.add("landingScroll");
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 360) {
-                logoHeight.value = "24";
-                logoWidth.value = "24";
-                handleRef.value.classList.remove("landingScroll");
-                handleRef.value.classList.add("scrolling")
-            } else {
-                handleRef.value.classList.add("landingScroll");
-                handleRef.value.classList.remove("scrolling");
-            }
-        })
+        window.addEventListener('scroll', doLandingScroll);
     } else {
         handleRef.value.classList.remove("landingScroll");
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 36) {
-                logoHeight.value = "24";
-                logoWidth.value = "24";
-                handleRef.value.classList.add("scrolling");
-            } else {
-                logoHeight.value = "50";
-                logoWidth.value = "50";
-                handleRef.value.classList.remove("scrolling");
-            }
-        })
+        window.addEventListener("scroll", doOtherPageScroll);
     }
 });
 </script>
