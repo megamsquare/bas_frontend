@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
+import Logo from '../icons/logo/Logo.vue';
 import { useRoutingStore } from "@/stores/routing";
 
 let route = useRoute();
 const handleRef = ref();
 let isLanding = ref(false);
+let logoHeight = ref();
+let logoWidth = ref();
 
 onMounted(() => {
     if (isLanding.value = true) {
@@ -28,13 +31,14 @@ watch(route, (to) => {
 });
 </script>
 <template>
-    <header ref="handleRef">
+    <header ref="handleRef" class="scrolling">
         <div class="wrapper">
             <nav>
                 <div class="logo">
                     <!-- Business Helper -->
                     <RouterLink to="/">
-                        <img src="@/assets/logo.svg" alt="Business Helper" width=100 height=100>
+                        <!-- <img src="@/assets/logo.svg" alt="Business Helper" width=50 height=50> -->
+                        <Logo  height=50 width=50 />
                     </RouterLink>
                     
                 </div>
@@ -88,7 +92,7 @@ header {
     left: 0;
     right: 0;
     padding: 8px 0;
-    transition: all 500ms;
+    transition: all 500ms ease;
     z-index: 10000;
 }
 
@@ -169,6 +173,18 @@ nav .dropnav span {
 
 .dropnav:hover .dropnav-content {
     display: block;
+}
+
+@media (min-width: 1024px) {
+    header.scrolling {
+        background-color: var(--color-background);
+        padding: 0;
+    }
+
+    header.scrolling .logo {
+        height: 24;
+        width: 24;
+    }
 }
 
 </style>
