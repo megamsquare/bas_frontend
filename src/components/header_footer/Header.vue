@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue';
+import { ref, watch } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
 import Logo from '../icons/logo/Logo.vue';
 import { useRoutingStore } from "@/stores/routing";
@@ -16,17 +16,26 @@ watch(route, (to) => {
             if (window.scrollY > 360) {
                 logoHeight.value = "24";
                 logoWidth.value = "24";
-                handleRef.value.classList.remove("landingScroll");
+                if (handleRef.value.classList.contains("landingScroll")) {
+                    handleRef.value.classList.remove("landingScroll");
+                }
+                
                 handleRef.value.classList.add("scrolling")
             } else {
                 logoHeight.value = "50";
                 logoWidth.value = "50";
-                handleRef.value.classList.add("landingScroll");
+                if (!handleRef.value.classList.contains("landingScroll")) {
+                    handleRef.value.classList.add("landingScroll");
+                }
+                
                 handleRef.value.classList.remove("scrolling");
             }
         })
     } else {
-        handleRef.value.classList.remove("landingScroll");
+        if (handleRef.value.classList.contains("landingScroll")) {
+            handleRef.value.classList.remove("landingScroll");
+        }
+        
         if (window.scrollY > 36) {
             handleRef.value.classList.add("scrolling")
         } else {
