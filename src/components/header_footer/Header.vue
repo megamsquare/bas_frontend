@@ -266,6 +266,29 @@ nav .dropnav span {
         padding: 0 30px;
         transition: all 0.3s ease;
     }
+
+    .hamburger,
+    .hamburger:after,
+    .hamburger:before {
+        display: block;
+        transition: .3s;
+    }
+
+    .landing_nav {
+        position: absolute;
+        top: 130%;
+        right: 2%;
+        width: 200px;
+        height: 230px;
+        background: var(--color-background);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        z-index: 12;
+    }
 }
 
 </style>
