@@ -86,6 +86,13 @@ watch(route, (to) => {
                         <RouterLink to="/register">Sign Up</RouterLink>
                     </div>
 
+                    <div class="hamburger"></div>
+
+                    <!-- <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div> -->
                 </div>
 
             </nav>
@@ -102,7 +109,7 @@ header {
     right: 0;
     padding: 8px 0;
     transition: all 500ms ease;
-    z-index: 10000;
+    z-index: 100;
 }
 
 header nav {
@@ -146,18 +153,6 @@ nav a.router-link-exact-active:hover {
     background-color: transparent;
 }
 
-nav .landing_nav a {
-    display: inline-block;
-    padding: 0 0.5rem;
-    margin-top: 4px;
-}
-
-nav .start_auth a {
-    display: inline-block;
-    padding: 0 1rem;
-    font-size: large;
-}
-
 nav .dropnav {
     position: relative;
     display: inline-block;
@@ -184,6 +179,45 @@ nav .dropnav span {
     display: block;
 }
 
+.hamburger,
+.hamburger:after,
+.hamburger:before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    margin: 8px auto;
+    border-radius: 3px;
+    background-color: white;
+    z-index: 100;
+    right: 10px;
+    display: none;
+}
+
+.hamburger:before {
+    top: -1px;
+    left: 0;
+}
+
+.hamburger:after {
+    bottom: -23px;
+    left: 0;
+}
+
+/* .hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+} */
+
 @media (min-width: 1024px) {
     header.scrolling {
         background-color: var(--color-background);
@@ -192,6 +226,45 @@ nav .dropnav span {
 
     header.landingScroll {
         display: none;
+    }
+
+    nav .landing_nav a {
+        display: inline-block;
+        padding: 0 0.5rem;
+        margin-top: 4px;
+    }
+    
+    nav .start_auth a {
+        display: inline-block;
+        padding: 0 1rem;
+        font-size: large;
+    }
+}
+
+@media (max-width: 768px) {
+   /* .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    } */
+
+    header {
+        padding: .2rem 1rem;
+        transition: 0.3s;
+        justify-content: space-between;
+    }
+
+    .landing_nav a {
+        display: block;
+        margin: 14px 0;
+        padding: 0 30px;
+        transition: all 0.3s ease;
     }
 }
 
