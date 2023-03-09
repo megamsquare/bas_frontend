@@ -294,7 +294,7 @@ nav .dropnav span {
 
     .landing_nav {
         position: absolute;
-        top: 130%;
+        top: 100%;
         right: -100%;
         width: 100px;
         height: 230px;
@@ -311,6 +311,21 @@ nav .dropnav span {
         right: 2%;
         z-index: 12;
     }
+    
+    nav .start_auth a {
+        display: inline-block;
+        padding: 0 .5rem;
+        font-size: medium;
+    }
+
+    header nav {
+        padding: 0;
+    }
+
+    nav .get_started .start_auth {
+        padding: 0 40px;
+    }
+    
 }
 
 </style>
