@@ -60,6 +60,8 @@ watch(route, (to) => {
         handleRef.value.classList.remove("landingScroll");
         window.addEventListener("scroll", doOtherPageScroll);
     }
+    console.log();
+    
 });
 </script>
 <template>
@@ -240,12 +242,13 @@ nav .dropnav span {
     header.scrolling {
         background-color: var(--color-background);
         padding: 0;
+        display: block;
     }
-
+    
     header.landingScroll {
         display: none;
     }
-
+    
     nav .landing_nav a {
         display: inline-block;
         padding: 0 0.5rem;
