@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { onMounted, onUnmounted, ref, watch } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
 import Logo from '../icons/logo/Logo.vue';
 
 let route = useRoute();
 const handleRef = ref();
+const menuBurger = ref();
+const navBar = ref();
 let logoHeight = ref("50");
 let logoWidth = ref("50");
 
@@ -34,6 +36,22 @@ function doOtherPageScroll(event: any) {
     }
 }
 
+function doToggle(event: any) {
+    if (navBar.value.classList.contains("is-open")) {
+        navBar.value.classList.remove("is-open");
+    } else {
+        navBar.value.classList.add("is-open");
+    }
+}
+
+onMounted(() => {
+    menuBurger.value.addEventListener("click", doToggle);
+}),
+
+onUnmounted(() => {
+    menuBurger.value.removeEventListener("click", doToggle);
+}),
+
 watch(route, (to) => {
     if (to.name == 'landing') {
         handleRef.value.classList.add("landingScroll");
@@ -58,7 +76,7 @@ watch(route, (to) => {
 
                 <div class="get_started">
 
-                    <div class="landing_nav">
+                    <div class="landing_nav" ref="navBar">
                         <div class="dropnav">
                             <a href="#">Platform</a>
                             <div class="dropnav-content">
@@ -86,7 +104,7 @@ watch(route, (to) => {
                         <RouterLink to="/register">Sign Up</RouterLink>
                     </div>
 
-                    <div class="hamburger"></div>
+                    <div class="hamburger" ref="menuBurger"></div>
 
                     <!-- <div class="hamburger">
                         <span class="bar"></span>
@@ -241,7 +259,7 @@ nav .dropnav span {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
    /* .hamburger {
         display: block;
     }
@@ -277,8 +295,8 @@ nav .dropnav span {
     .landing_nav {
         position: absolute;
         top: 130%;
-        right: 2%;
-        width: 200px;
+        right: -100%;
+        width: 100px;
         height: 230px;
         background: var(--color-background);
         display: flex;
@@ -287,6 +305,10 @@ nav .dropnav span {
         align-items: flex-start;
         border-radius: 10px;
         transition: all 0.3s ease;
+        z-index: 12;
+    }
+    .landing_nav.is-open {
+        right: 2%;
         z-index: 12;
     }
 }
