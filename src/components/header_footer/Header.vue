@@ -269,7 +269,7 @@ nav .dropnav span {
 
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
-    }
+    }Kof
 
     .hamburger.active .bar:nth-child(1){
         transform: translateY(8px) rotate(45deg);
