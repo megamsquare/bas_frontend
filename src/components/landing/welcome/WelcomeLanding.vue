@@ -19,6 +19,7 @@ import IconHome from '@/components/icons/IconHome.vue'
             <RouterLink :to="{name: 'crms'}">CRMS</RouterLink>
             <RouterLink :to="{name: 'dms'}">DMS</RouterLink>
             <RouterLink :to="{name: 'kpi'}">KPI</RouterLink>
+            <RouterLink :to="{name: 'kpi'}">WMS</RouterLink>
         </div>
     </WelcomeLandingItem>
 
