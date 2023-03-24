@@ -1,14 +1,18 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import LandingSectionItem from './LandingSectionItem.vue';
+import IconSection from '@/components/icons/IconSection.vue';
 
-const background_image = ref('@/assets/Browsing-online.svg');
+const height = ref('682.76');
+const width = ref('865.76');
+
 </script>
 
 <template>
     <LandingSectionItem>
         <template #left-section>
-            <img :src=background_image alt="">
+            <!-- <IconSection></IconSection> -->
+            <!-- <img :src=background_image alt=""> -->
         </template>
         <template #right-section>
             <div class="text-item-right">

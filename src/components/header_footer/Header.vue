@@ -71,7 +71,7 @@ watch(route, (to) => {
                 <div class="logo">
                     <!-- Business Helper -->
                     <RouterLink to="/">
-                        <Logo :height=logoHeight :width=logoWidth />
+                        <!-- <Logo :height=logoHeight :width=logoWidth /> -->
                     </RouterLink>
                     
                 </div>
