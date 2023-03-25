@@ -1,18 +1,32 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 import LandingSectionItem from './LandingSectionItem.vue';
 import IconSection from '@/components/icons/IconSection.vue';
 
 const height = ref('682.76');
 const width = ref('865.76');
 
+onMounted(() => {
+    if (window.innerWidth <= 900) {
+        console.log('max width: ', window.innerWidth)
+        height.value = "26";
+        width.value = "30";
+    }
+    // console.log(window.innerWidth);
+}),
+
+onUnmounted(() => {
+    height.value = "682.76";
+    width.value = "865.76";
+});
+
 </script>
 
 <template>
     <LandingSectionItem>
         <template #left-section>
-            <!-- <IconSection></IconSection> -->
-            <!-- <img :src=background_image alt=""> -->
+            <IconSection :height="height" :width="width" ></IconSection>
+            <!-- <img src="@/assets/Browsing-online.svg" alt=""> -->
         </template>
         <template #right-section>
             <div class="text-item-right">
@@ -57,6 +71,19 @@ img {
         padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
     }
     
+}
+
+@media (max-width: 900) {
+
+    img {
+        margin: 0 0.5rem 0 0;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .text-item-right {
+        display: block;
+        padding: 0.4rem 0 0.5rem calc(--section-gap) / 2;
+    }
 }
 
 </style>
