@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onActivated, onMounted, onUnmounted, ref } from 'vue';
+import { onBeforeMount, onMounted, onUnmounted, ref } from 'vue';
 import LandingSectionItem from './LandingSectionItem.vue';
 import IconSection from '@/components/icons/IconSection.vue';
 
@@ -11,8 +11,8 @@ const widthMobile = ref('380');
 
 const isMobile = ref()
 
-function changeScreen() {
-    if (window.innerWidth <= 1000) {
+function changeScreen(e: any) {
+    if (e.currentTarget.innerWidth <= 1000) {
         isMobile.value = true;
         console.log('This is windows width: ', window.innerWidth);
     } else {
