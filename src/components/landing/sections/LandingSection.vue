@@ -1,18 +1,19 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue';
+import { onActivated, onMounted, onUnmounted, ref } from 'vue';
 import LandingSectionItem from './LandingSectionItem.vue';
 import IconSection from '@/components/icons/IconSection.vue';
 
 const heightWindow = ref('682.76');
 const widthWindow = ref('865.76');
 
-const heightMobile= ref('26');
-const widthMobile = ref('30');
+const heightMobile= ref('200');
+const widthMobile = ref('380');
 
-const isMobile = ref(false)
+const isMobile = ref()
+console.log(window.innerWidth);
 
 function changeScreen() {
-    if (window.innerWidth <= 900) {
+    if (window.innerWidth <= 1000) {
         isMobile.value = true;
         console.log('This is windows width: ', window.innerWidth);
     } else {
@@ -23,18 +24,10 @@ function changeScreen() {
 
 onMounted(() => {
     window.addEventListener("resize", changeScreen);
-    // if (window.innerWidth <= 900) {
-    //     console.log('max width: ', window.innerWidth)
-    //     height.value = "26";
-    //     width.value = "30";
-    // }
-    // console.log(window.innerWidth);
 }),
 
 onUnmounted(() => {
-    // window.removeEventListener("resize", changeScreen);
-    // height.value = "682.76";
-    // width.value = "865.76";
+    window.removeEventListener("resize", changeScreen);
 });
 
 </script>
@@ -42,7 +35,7 @@ onUnmounted(() => {
 <template>
     <LandingSectionItem>
         <template #left-section>
-            <!-- <IconSection :height="heightWindow" :width="widthWindow" v-show="!isMobile"></IconSection> -->
+            <IconSection :height="heightWindow" :width="widthWindow" v-show="!isMobile"></IconSection>
             <IconSection :height="heightMobile" :width="widthMobile" v-show="isMobile"></IconSection>
             <!-- <img src="@/assets/Browsing-online.svg" alt=""> -->
         </template>
