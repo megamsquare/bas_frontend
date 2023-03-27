@@ -10,7 +10,6 @@ const heightMobile= ref('200');
 const widthMobile = ref('380');
 
 const isMobile = ref()
-console.log(window.innerWidth);
 
 function changeScreen() {
     if (window.innerWidth <= 1000) {
